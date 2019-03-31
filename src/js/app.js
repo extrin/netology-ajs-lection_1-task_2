@@ -23,4 +23,6 @@ const sample_data = [523, 6000, 5001, 5013];
 for (let value of sample_data) {
   document.getElementById(`data_${value}`).innerHTML = value;
   document.getElementById(`res_${value}`).innerHTML = set_message(value);
+  console.log(`Balance: ${value}`);
+  console.log(`Message: ${set_message(value)}`);
 }
