@@ -2,6 +2,7 @@ const get_plural_form = (value, form1 = "балл", form2 = "балла", form3 
   "use strict";
   if (!isNaN(value)) {
     if (value === 0) return
+    if (value === 0) return form3;
     const remainder_1 = Math.abs(value) % 100;
     const remainder_2 = value % 10;
     if ((remainder_1 > 10) && (remainder_1 < 20)) return form3;
